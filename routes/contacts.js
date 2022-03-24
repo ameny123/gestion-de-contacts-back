@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
   try {
     const contacts = await Contacts.find({});
     res.send({ contacts })
+    console.log('contacts',contacts);
   } catch (err) {
     res.status(400).send({ error: err });
   }
@@ -26,7 +27,11 @@ router.post('/', async (req, res) => {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       phoneNumber: req.body.phoneNumber,
-      email: req.body.email
+      email: req.body.email,
+      adresse: req.body.adresse,
+      creationDate: req.body.creationDate,
+      fonction: req.body.fonction,
+      CA: req.body.CA,
     });
     res.send({ newContact });
   } catch (err) {

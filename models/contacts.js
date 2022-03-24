@@ -21,6 +21,26 @@ const contactSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
+  adresse: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  creationDate: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  fonction: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  CA: {
+    type: Number,
+    required: true,
+    trim: true
+  },
 
 });
 
